@@ -14,5 +14,21 @@ function fibs(num) {
     return returnArray;
 }
 
-let temp = fibs(15);
-console.log(temp);
+function fibsRec(num) {
+    let returnArray = [];
+    let result = 0;
+    let cur = 1;
+    let temp = 0;
+
+    while (num !== 0) {
+        console.log("This was printed recursively");
+        returnArray.push(result);
+        temp = result;
+        result = cur + result;
+        cur = temp;
+        num--;
+    }
+
+    return returnArray;
+}
+
